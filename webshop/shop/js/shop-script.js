@@ -123,7 +123,7 @@ $('#button-pass-show-hide').click(function(){
        
      			            var $input = $("#auth_pass");
 			                var change = "text";
-			                var rep = $("<input placeholder='Пароль' type='" + change + "' />")
+			                var rep = $("<input placeholder='ГЏГ Г°Г®Г«Гј' type='" + change + "' />")
 			                    .attr("id", $input.attr("id"))
 			                    .attr("name", $input.attr("name"))
 			                    .attr('class', $input.attr('class'))
@@ -138,7 +138,7 @@ $('#button-pass-show-hide').click(function(){
         
      			            var $input = $("#auth_pass");
 			                var change = "password";
-			                var rep = $("<input placeholder='Пароль' type='" + change + "' />")
+			                var rep = $("<input placeholder='ГЏГ Г°Г®Г«Гј' type='" + change + "' />")
 			                    .attr("id", $input.attr("id"))
 			                    .attr("name", $input.attr("name"))
 			                    .attr('class', $input.attr('class'))
@@ -257,7 +257,7 @@ $('#button-remind').click(function(){
   {
      $(".auth-loading").hide();
      $("#button-remind").show();
-     $('#message-remind').attr("class","message-remind-success").html("На ваш e-mail выслан пароль.").slideDown(400);
+     $('#message-remind').attr("class","message-remind-success").html("ГЌГ  ГўГ Гё e-mail ГўГ»Г±Г«Г Г­ ГЇГ Г°Г®Г«Гј.").slideDown(400);
      
      setTimeout("$('#message-remind').html('').hide(),$('#block-remind').hide(),$('#input-email-pass').show()", 3000);
  
@@ -335,12 +335,12 @@ if (input_search.length >= 3 && input_search.length < 150 )
 
 
 
-    //Шаблон проверки email на правильность
+    //ГГ ГЎГ«Г®Г­ ГЇГ°Г®ГўГҐГ°ГЄГЁ email Г­Г  ГЇГ°Г ГўГЁГ«ГјГ­Г®Г±ГІГј
     function isValidEmailAddress(emailAddress) {
     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     return pattern.test(emailAddress);
     }
- // Контактные данные
+ // ГЉГ®Г­ГІГ ГЄГІГ­Г»ГҐ Г¤Г Г­Г­Г»ГҐ
   $('#confirm-button-next').click(function(e){   
 
    var order_fio = $("#order_fio").val();
@@ -356,7 +356,7 @@ if (input_search.length >= 3 && input_search.length < 150 )
  }else { $(".label_delivery").css("color","black"); send_order_delivery = '1';
 
   
-  // Проверка ФИО 
+  // ГЏГ°Г®ГўГҐГ°ГЄГ  Г”Г€ГЋ 
  if (order_fio == "" || order_fio.length > 50 )
  {
     $("#order_fio").css("borderColor","#FDB6B6");
@@ -365,14 +365,14 @@ if (input_search.length >= 3 && input_search.length < 150 )
  }else { $("#order_fio").css("borderColor","#DBDBDB");  send_order_fio = '1';}
 
   
- //проверка email
+ //ГЇГ°Г®ГўГҐГ°ГЄГ  email
  if (isValidEmailAddress(order_email) == false)
  {
     $("#order_email").css("borderColor","#FDB6B6");
   send_order_email = '0';   
  }else { $("#order_email").css("borderColor","#DBDBDB"); send_order_email = '1';}
   
- // Проверка телефона
+ // ГЏГ°Г®ГўГҐГ°ГЄГ  ГІГҐГ«ГҐГґГ®Г­Г 
  
   if (order_phone == "" || order_phone.length > 50)
  {
@@ -380,7 +380,7 @@ if (input_search.length >= 3 && input_search.length < 150 )
     send_order_phone = '0';   
  }else { $("#order_phone").css("borderColor","#DBDBDB"); send_order_phone = '1';}
  
- // Проверка Адресса
+ // ГЏГ°Г®ГўГҐГ°ГЄГ  ГЂГ¤Г°ГҐГ±Г±Г 
  
   if (order_address == "" || order_address.length > 150)
  {
@@ -389,10 +389,10 @@ if (input_search.length >= 3 && input_search.length < 150 )
  }else { $("#order_address").css("borderColor","#DBDBDB"); send_order_address = '1';}
   
 } 
- // Глобальная проверка
+ // ГѓГ«Г®ГЎГ Г«ГјГ­Г Гї ГЇГ°Г®ГўГҐГ°ГЄГ 
  if (send_order_delivery == "1" && send_order_fio == "1" && send_order_email == "1" && send_order_phone == "1" && send_order_address == "1")
  {
-    // Отправляем форму
+    // ГЋГІГЇГ°Г ГўГ«ГїГҐГ¬ ГґГ®Г°Г¬Гі
    return true;
  }
 
@@ -430,7 +430,7 @@ function loadcart(){
   if (data == "0")
   {
   
-    $("#block-basket > a").html("Корзина пуста");
+    $("#block-basket > a").html("ГЉГ®Г°Г§ГЁГ­Г  ГЇГіГ±ГІГ ");
 	
   }else
   {
@@ -443,35 +443,21 @@ function loadcart(){
        
 }
 
-
- function fun_group_price(intprice) {  
-    // Группировка цифр по разрядам
-  var result_total = String(intprice);
-  var lenstr = result_total.length;
-  
-    switch(lenstr) {
-  case 4: {
-  groupprice = result_total.substring(0,1)+" "+result_total.substring(1,4);
-    break;
-  }
-  case 5: {
-  groupprice = result_total.substring(0,2)+" "+result_total.substring(2,5);
-    break;
-  }
-  case 6: {
-  groupprice = result_total.substring(0,3)+" "+result_total.substring(3,6); 
-    break;
-  }
-  case 7: {
-  groupprice = result_total.substring(0,1)+" "+result_total.substring(1,4)+" "+result_total.substring(4,7); 
-    break;
-  }
-  default: {
-  groupprice = result_total;  
-  }
-}  
-    return groupprice;
-    }
+/**
+* Р¤РѕСЂРјР°С‚РёСЂСѓРµРј С†РµРЅСѓ
+* РќР°С…РѕРґРёРј СЂР°Р·СЂС‹РІС‹ РјРµР¶РґСѓ С†РёС„СЂР°РјРё, РµСЃР»Рё РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ СЂР°Р·СЂС‹РІР° СЃР»РµРґСѓРµС‚
+* Р±Р»РѕРєРё РїРѕ 3 С†РёС„СЂС‹ РІ РєР°Р¶РґРѕРј Рё РїСЂРё СЌС‚РѕРј РїРѕСЃР»Рµ СЌС‚РѕРіРѕ Р±Р»РѕРєР° РёР· 3-С… С†РёС„СЂ РЅРµС‚ РѕРґРёРЅРѕС‡РЅС‹С… С†РёС„СЂ
+* Р­С‚Рё СЂР°Р·СЂС‹РІС‹ Р·Р°РјРµРЅСЏРµРј РїСЂРѕР±РµР»Р°РјРё
+* @param value
+*/
+function fun_group_price(intprice) {  
+    // \B - РЅР°С…РѕРґРёС‚ РЅРµ РіСЂР°РЅРёС†Сѓ СЃР»РѕРІ, Р°РЅС‚РѕРЅРёРј \b
+    // x(?=y) - РЅР°С…РѕРґРёС‚ x, С‚РѕР»СЊРєРѕ РµСЃР»Рё Р·Р° x СЃР»РµРґСѓРµС‚ y
+    // x(!y) - РЅР°С…РѕРґРёС‚ x, С‚РѕР»СЊРєРѕ РµСЃР»Рё Р·Р° x РЅРµ СЃР»РµРґСѓРµС‚ y
+    // (:x) - РЅР°С…РѕРґРёС‚ x, РЅРѕ РЅРµ Р·Р°РїРѕРјРёРЅР°РµС‚
+    // g - РіР»РѕР±Р°Р»СЊРЅС‹Р№ РїРѕРёСЃРє(РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‚СЃСЏ РІСЃРµ СЃРѕРІРїР°РґРµРЅРёСЏ)
+    return  value.replace(/\B(?=(?:\d{3})+(?!\d))/g,' ');
+}
 
 
 
@@ -489,12 +475,12 @@ $('.count-minus').click(function(){
   $("#input-id"+iid).val(data);  
   loadcart();
   
-  // переменная с ценной продукта
+  // ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г± Г¶ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГІГ 
   var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
-  // Цену умножаем на колличество
+  // Г–ГҐГ­Гі ГіГ¬Г­Г®Г¦Г ГҐГ¬ Г­Г  ГЄГ®Г«Г«ГЁГ·ГҐГ±ГІГўГ®
   result_total = Number(priceproduct) * Number(data);
  
-  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" Г°ГіГЎ");
   $("#tovar"+iid+" > h5 > .span-count").html(data);
   
   itog_price();
@@ -517,12 +503,12 @@ $('.count-plus').click(function(){
   $("#input-id"+iid).val(data);  
   loadcart();
   
-  // переменная с ценной продукта
+  // ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г± Г¶ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГІГ 
   var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
-  // Цену умножаем на колличество
+  // Г–ГҐГ­Гі ГіГ¬Г­Г®Г¦Г ГҐГ¬ Г­Г  ГЄГ®Г«Г«ГЁГ·ГҐГ±ГІГўГ®
   result_total = Number(priceproduct) * Number(data);
  
-  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" Г°ГіГЎ");
   $("#tovar"+iid+" > h5 > .span-count").html(data);
   
   itog_price();
@@ -548,13 +534,13 @@ $('.count-plus').click(function(){
   $("#input-id"+iid).val(data);  
   loadcart();
     
-  // переменная с ценной продукта
+  // ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г± Г¶ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГІГ 
   var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
-  // Цену умножаем на колличество
+  // Г–ГҐГ­Гі ГіГ¬Г­Г®Г¦Г ГҐГ¬ Г­Г  ГЄГ®Г«Г«ГЁГ·ГҐГ±ГІГўГ®
   result_total = Number(priceproduct) * Number(data);
 
 
-  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" Г°ГіГЎ");
   $("#tovar"+iid+" > h5 > .span-count").html(data);
   itog_price();
 
@@ -616,7 +602,7 @@ $('#button-send-review').click(function(){
      } 
                                          
             
-            // Глобальная проверка и отправка отзыва
+            // ГѓГ«Г®ГЎГ Г«ГјГ­Г Гї ГЇГ°Г®ГўГҐГ°ГЄГ  ГЁ Г®ГІГЇГ°Г ГўГЄГ  Г®ГІГ§Г»ГўГ 
             
     if ( name_review == '1' && good_review == '1' && bad_review == '1')
       {
@@ -650,7 +636,7 @@ $('#likegood').click(function(){
   
   if (data == 'no')
   {
-    alert('Вы уже голосовали!');
+    alert('Г‚Г» ГіГ¦ГҐ ГЈГ®Г«Г®Г±Г®ГўГ Г«ГЁ!');
   }  
    else
    {
